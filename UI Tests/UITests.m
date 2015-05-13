@@ -21,4 +21,21 @@
   [tester tapViewWithAccessibilityLabel:@"Clear"];
 }
 
+
+- (void)test00TabBarButtons {
+  // 1
+  [tester tapViewWithAccessibilityLabel:@"History"];
+  [tester waitForViewWithAccessibilityLabel:@"History List"];
+  
+  // 2
+  [tester tapViewWithAccessibilityLabel:@"Timer"];
+  [tester waitForViewWithAccessibilityLabel:@"Task Name"];
+  
+  // 3
+  [tester tapViewWithAccessibilityLabel:@"Settings"];
+  [tester waitForViewWithAccessibilityLabel:@"Debug Mode"];
+}
+
+
+
 @end

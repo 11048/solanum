@@ -20,6 +20,10 @@
   [self refreshData];
 
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshData) name:kWorkedNotification object:nil];
+  
+  
+  [self.tableView setAccessibilityLabel:@"History List"];
+  [self.tableView setIsAccessibilityElement:YES];
 }
 
 - (void)refreshData
